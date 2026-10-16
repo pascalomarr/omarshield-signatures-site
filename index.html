@@ -11,138 +11,115 @@ body{
   margin:0;
   font-family:Arial,sans-serif;
   color:white;
-  background:radial-gradient(circle at 75% 35%,#092e50,#020812 65%);
+  background:#020812;
 }
 header{
-  padding:22px 7%;
-  border-bottom:1px solid #263b50;
-  display:flex;justify-content:space-between;
-  align-items:center;flex-wrap:wrap;gap:12px;
+  padding:20px 7%;
+  border-bottom:1px solid #1d2c3d;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px;
 }
-.logo{font-size:30px;font-weight:bold}
-.logo span{color:#ff1828}
-.logo small{display:block;font-size:12px;color:#ccd5e0}
-.slogan{color:#fff}
-.slogan span{color:#ff2438}
+.logo{
+  font-size:26px;
+  font-weight:bold;
+}
+.logo span{color:#ff2d3d}
 main{
-  max-width:1200px;margin:auto;padding:65px 7%;
-  display:grid;grid-template-columns:1.1fr .9fr;
-  align-items:center;gap:40px;
+  max-width:900px;
+  margin:auto;
+  padding:80px 7%;
+  text-align:center;
 }
-h1{font-size:clamp(32px,5vw,52px);line-height:1.12}
-h1 span{color:#ff2638}
 .badge{
-  display:inline-block;background:#e50920;
-  padding:12px 18px;border-radius:30px;font-weight:bold;
+  display:inline-block;
+  background:#e50920;
+  color:white;
+  text-decoration:none;
+  padding:12px 20px;
+  border-radius:30px;
+  font-weight:bold;
 }
-.description{font-size:18px;line-height:1.7;color:#d6e0eb}
-.status{
-  margin:25px 0;padding:18px;
-  border:1px solid #33465c;border-radius:15px;
-  background:#071725;
+h1{
+  font-size:clamp(34px,6vw,56px);
+  margin:25px 0 15px;
 }
-.status strong{display:block;color:#aab7c5;margin-top:7px}
-.status.disponible{
-  border-color:#166534;
+h1 span{color:#ff2d3d}
+p{
+  color:#c6d2de;
+  font-size:18px;
+  line-height:1.7;
 }
-.status.disponible strong{color:#22c55e}
-.download{
-  display:inline-block;background:#33465c;
-  color:#cbd5e1;text-decoration:none;font-weight:bold;
-  padding:18px 25px;border-radius:35px;
+.boutons{
+  margin-top:35px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:15px;
+}
+.bouton{
+  display:inline-block;
+  padding:16px 26px;
+  border-radius:35px;
+  text-decoration:none;
+  font-weight:bold;
+}
+.bouton-rouge{
+  background:#e50920;
+  color:white;
+}
+.bouton-gris{
+  background:#22303f;
+  color:#c6d2de;
   cursor:not-allowed;
 }
-.download.disponible{
-  background:linear-gradient(#22c55e,#15803d);
-  color:#052e16;
-  box-shadow:0 0 22px #22c55e55;
-  cursor:pointer;
-}
-.visual{
-  text-align:center;padding:35px 15px;
-  border:1px solid #264b6b;border-radius:25px;
-  background:linear-gradient(145deg,#102a43,#030a14);
-  box-shadow:0 0 45px #0066aa22;
-}
-.shield{
-  width:150px;height:170px;margin:auto;
-  display:grid;place-items:center;
-  font-size:85px;font-weight:bold;
-  color:white;
-  background:linear-gradient(135deg,#ff5964,#d90018 55%,#70000c);
-  clip-path:polygon(50% 0,95% 17%,88% 65%,50% 100%,12% 65%,5% 17%);
-  filter:drop-shadow(0 0 20px red);
-}
-.visual h2{font-size:32px}
-.visual h2 span{color:#ff2638}
-.features{
-  padding:25px 7%;display:grid;
-  grid-template-columns:repeat(4,1fr);gap:20px;
-  border-top:1px solid #263b50;
-}
-.feature{text-align:center;color:#dbe5ef}
-.feature b{display:block;color:#ff3446;margin-bottom:8px}
 footer{
-  padding:25px 7%;border-top:1px solid #263b50;
-  display:flex;justify-content:space-between;
-  gap:15px;flex-wrap:wrap;color:#9baabd;font-size:13px;
-}
-@media(max-width:750px){
-  main{grid-template-columns:1fr;padding-top:35px}
-  .features{grid-template-columns:repeat(2,1fr)}
-  .slogan{font-size:13px}
+  padding:25px 7%;
+  border-top:1px solid #1d2c3d;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+  color:#8b98a7;
+  font-size:13px;
 }
 </style>
 </head>
 
 <body>
+
 <header>
-  <div class="logo">🛡️ Omar<span>Shield</span>
-    <small>Antivirus · Antimalware · Protection totale</small>
-  </div>
-  <div class="slogan">Votre sécurité, notre <span>priorité</span></div>
+  <div class="logo">🛡️ Omar<span>Shield</span></div>
+  <div>Votre sécurité, notre priorité</div>
 </header>
 
 <main>
-  <section>
-    <div class="badge">⟳ Mise à jour de l’antivirus</div>
-    <h1>Bienvenue sur le site officiel d’<span>OmarShield</span></h1>
-    <p class="description">
-      Les mises à jour de votre antivirus seront publiées ici
-      régulièrement. Retrouvez les nouvelles versions sur
-      notre site officiel.
-    </p>
+  <a class="badge" href="#">⟳ Mise à jour de l’antivirus</a>
 
-    <div class="status">
-      Dernière mise à jour :
-      <strong>● Bientôt disponible</strong>
-    </div>
+  <h1>Bienvenue sur le site officiel d’<span>OmarShield</span></h1>
 
-    <span class="download">
-       ⬇ Télécharger la mise à jour
+  <p>
+    Les mises à jour de votre antivirus seront publiées ici régulièrement.
+  </p>
+
+  <div class="boutons">
+    <a class="bouton bouton-rouge" href="#">
+      Voir les mises à jour
+    </a>
+
+    <span class="bouton bouton-gris">
+      ⬇ Télécharger la mise à jour
     </span>
-  </section>
-
-  <section class="visual">
-    <div class="shield">O</div>
-    <h2>Omar<span>Shield</span></h2>
-    <p>Antivirus · Antimalware</p>
-    <p style="color:#20e6a0">✓ Votre sécurité, notre priorité</p>
-    <p>Protection • Performance • Confiance</p>
-  </section>
+  </div>
 </main>
-
-<section class="features">
-  <div class="feature"><b>🛡 Protection</b>En préparation</div>
-  <div class="feature"><b>🔍 Détection</b>Des menaces — à venir</div>
-  <div class="feature"><b>🌐 Navigation</b>Sécurisée — à venir</div>
-  <div class="feature"><b>🔒 Confidentialité</b>Vos données protégées — à venir</div>
-</section>
 
 <footer>
   <span>© 2026 OmarShield</span>
   <span>O-FLOW MARKETING DIGITAL</span>
   <span>Tous droits réservés.</span>
 </footer>
+
 </body>
 </html>
