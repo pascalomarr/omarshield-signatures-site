@@ -35,21 +35,21 @@ h1 span{color:#ff2638}
 .badge{
   display:inline-block;background:#e50920;
   padding:12px 18px;border-radius:30px;font-weight:bold;
+  color:white;text-decoration:none;
 }
 .description{font-size:18px;line-height:1.7;color:#d6e0eb}
 .status{
   margin:25px 0;padding:18px;
-  border:1px solid #1c9e9b;border-radius:15px;
+  border:1px solid #33465c;border-radius:15px;
   background:#071725;
 }
-.status strong{display:block;color:#21e6a1;margin-top:7px}
+.status strong{display:block;color:#aab7c5;margin-top:7px}
 .download{
-  display:inline-block;background:linear-gradient(#ff3545,#d90016);
-  color:white;text-decoration:none;font-weight:bold;
+  display:inline-block;background:#33465c;
+  color:#cbd5e1;text-decoration:none;font-weight:bold;
   padding:18px 25px;border-radius:35px;
-  box-shadow:0 0 22px #ff172b55;
+  cursor:not-allowed;
 }
-.download:hover{transform:translateY(-2px)}
 .visual{
   text-align:center;padding:35px 15px;
   border:1px solid #264b6b;border-radius:25px;
@@ -67,13 +67,6 @@ h1 span{color:#ff2638}
 }
 .visual h2{font-size:32px}
 .visual h2 span{color:#ff2638}
-.features{
-  padding:25px 7%;display:grid;
-  grid-template-columns:repeat(4,1fr);gap:20px;
-  border-top:1px solid #263b50;
-}
-.feature{text-align:center;color:#dbe5ef}
-.feature b{display:block;color:#ff3446;margin-bottom:8px}
 footer{
   padding:25px 7%;border-top:1px solid #263b50;
   display:flex;justify-content:space-between;
@@ -81,7 +74,6 @@ footer{
 }
 @media(max-width:750px){
   main{grid-template-columns:1fr;padding-top:35px}
-  .features{grid-template-columns:repeat(2,1fr)}
   .slogan{font-size:13px}
 }
 </style>
@@ -97,7 +89,7 @@ footer{
 
 <main>
   <section>
-    <div class="badge">⟳ Mise à jour de l’antivirus</div>
+    <a class="badge" href="#">⟳ Mise à jour de l’antivirus</a>
     <h1>Bienvenue sur le site officiel d’<span>OmarShield</span></h1>
     <p class="description">
       Les mises à jour de votre antivirus seront publiées ici
@@ -110,9 +102,9 @@ footer{
       <strong>● Bientôt disponible</strong>
     </div>
 
-    <a class="download" href="#">
+    <span class="download">
        ⬇ Télécharger la mise à jour
-    </a>
+    </span>
   </section>
 
   <section class="visual">
@@ -123,13 +115,6 @@ footer{
     <p>Protection • Performance • Confiance</p>
   </section>
 </main>
-
-<section class="features">
-  <div class="feature"><b>🛡 Protection</b>En temps réel</div>
-  <div class="feature"><b>🔍 Détection</b>Des menaces</div>
-  <div class="feature"><b>🌐 Navigation</b>Sécurisée</div>
-  <div class="feature"><b>🔒 Confidentialité</b>Vos données protégées</div>
-</section>
 
 <footer>
   <span>© 2026 OmarShield</span>
