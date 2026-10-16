@@ -1,100 +1,140 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Omarshield</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b1220;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 20px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OmarShield — Site officiel</title>
 
-    .carte {
-      background: #111c31;
-      border: 1px solid #24344f;
-      border-radius: 18px;
-      padding: 35px;
-      max-width: 520px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
-    }
-
-    .logo {
-      width: 70px;
-      height: 70px;
-      border-radius: 18px;
-      background: #22c55e;
-      color: #052e16;
-      font-size: 34px;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 34px;
-    }
-
-    h2 {
-      margin: 10px 0 20px;
-      color: #86efac;
-      font-size: 18px;
-      font-weight: normal;
-    }
-
-    p {
-      color: #cbd5e1;
-      line-height: 1.6;
-    }
-
-    .statut {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 18px;
-      border-radius: 999px;
-      background: #052e16;
-      color: #86efac;
-      font-size: 14px;
-      border: 1px solid #166534;
-    }
-
-    .bouton {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 25px;
-      background: #22c55e;
-      color: #052e16;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
-    }
-
-    .bouton:hover {
-      background: #16a34a;
-    }
-  </style>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  color:white;
+  background:radial-gradient(circle at 75% 35%,#092e50,#020812 65%);
+}
+header{
+  padding:22px 7%;
+  border-bottom:1px solid #263b50;
+  display:flex;justify-content:space-between;
+  align-items:center;flex-wrap:wrap;gap:12px;
+}
+.logo{font-size:30px;font-weight:bold}
+.logo span{color:#ff1828}
+.logo small{display:block;font-size:12px;color:#ccd5e0}
+.slogan{color:#fff}
+.slogan span{color:#ff2438}
+main{
+  max-width:1200px;margin:auto;padding:65px 7%;
+  display:grid;grid-template-columns:1.1fr .9fr;
+  align-items:center;gap:40px;
+}
+h1{font-size:clamp(32px,5vw,52px);line-height:1.12}
+h1 span{color:#ff2638}
+.badge{
+  display:inline-block;background:#e50920;
+  padding:12px 18px;border-radius:30px;font-weight:bold;
+}
+.description{font-size:18px;line-height:1.7;color:#d6e0eb}
+.status{
+  margin:25px 0;padding:18px;
+  border:1px solid #1c9e9b;border-radius:15px;
+  background:#071725;
+}
+.status strong{display:block;color:#21e6a1;margin-top:7px}
+.download{
+  display:inline-block;background:linear-gradient(#ff3545,#d90016);
+  color:white;text-decoration:none;font-weight:bold;
+  padding:18px 25px;border-radius:35px;
+  box-shadow:0 0 22px #ff172b55;
+}
+.download:hover{transform:translateY(-2px)}
+.visual{
+  text-align:center;padding:35px 15px;
+  border:1px solid #264b6b;border-radius:25px;
+  background:linear-gradient(145deg,#102a43,#030a14);
+  box-shadow:0 0 45px #0066aa22;
+}
+.shield{
+  width:150px;height:170px;margin:auto;
+  display:grid;place-items:center;
+  font-size:85px;font-weight:bold;
+  color:white;
+  background:linear-gradient(135deg,#ff5964,#d90018 55%,#70000c);
+  clip-path:polygon(50% 0,95% 17%,88% 65%,50% 100%,12% 65%,5% 17%);
+  filter:drop-shadow(0 0 20px red);
+}
+.visual h2{font-size:32px}
+.visual h2 span{color:#ff2638}
+.features{
+  padding:25px 7%;display:grid;
+  grid-template-columns:repeat(4,1fr);gap:20px;
+  border-top:1px solid #263b50;
+}
+.feature{text-align:center;color:#dbe5ef}
+.feature b{display:block;color:#ff3446;margin-bottom:8px}
+footer{
+  padding:25px 7%;border-top:1px solid #263b50;
+  display:flex;justify-content:space-between;
+  gap:15px;flex-wrap:wrap;color:#9baabd;font-size:13px;
+}
+@media(max-width:750px){
+  main{grid-template-columns:1fr;padding-top:35px}
+  .features{grid-template-columns:repeat(2,1fr)}
+  .slogan{font-size:13px}
+}
+</style>
 </head>
+
 <body>
-  <div class="carte">
-    <div class="logo">O</div>
-    <h1>Omarshield</h1>
-    <h2>Mises à jour de l’antivirus</h2>
-    <p>Bienvenue sur le site officiel d’Omarshield.</p>
-    <p>Les mises à jour seront publiées ici régulièrement.</p>
-    <div class="statut">Dernière mise à jour : bientôt disponible</div>
-    <a class="bouton" href="#">Télécharger la mise à jour</a>
+<header>
+  <div class="logo">🛡️ Omar<span>Shield</span>
+    <small>Antivirus · Antimalware · Protection totale</small>
   </div>
+  <div class="slogan">Votre sécurité, notre <span>priorité</span></div>
+</header>
+
+<main>
+  <section>
+    <div class="badge">⟳ Mise à jour de l’antivirus</div>
+    <h1>Bienvenue sur le site officiel d’<span>OmarShield</span></h1>
+    <p class="description">
+      Les mises à jour de votre antivirus seront publiées ici
+      régulièrement. Retrouvez les nouvelles versions sur
+      notre site officiel.
+    </p>
+
+    <div class="status">
+      Dernière mise à jour :
+      <strong>● Bientôt disponible</strong>
+    </div>
+
+    <a class="download" href="#">
+       ⬇ Télécharger la mise à jour
+    </a>
+  </section>
+
+  <section class="visual">
+    <div class="shield">O</div>
+    <h2>Omar<span>Shield</span></h2>
+    <p>Antivirus · Antimalware</p>
+    <p style="color:#20e6a0">✓ Votre sécurité, notre priorité</p>
+    <p>Protection • Performance • Confiance</p>
+  </section>
+</main>
+
+<section class="features">
+  <div class="feature"><b>🛡 Protection</b>En temps réel</div>
+  <div class="feature"><b>🔍 Détection</b>Des menaces</div>
+  <div class="feature"><b>🌐 Navigation</b>Sécurisée</div>
+  <div class="feature"><b>🔒 Confidentialité</b>Vos données protégées</div>
+</section>
+
+<footer>
+  <span>© 2026 OmarShield</span>
+  <span>O-FLOW MARKETING DIGITAL</span>
+  <span>Tous droits réservés.</span>
+</footer>
 </body>
 </html>
