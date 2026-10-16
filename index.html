@@ -4,13 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OmarShield — Site officiel</title>
-.service-client p{
-  color:white;
-}
-.service-client a{
-  color:white;
-  font-weight:bold;
-}
+
 <style>
 *{box-sizing:border-box}
 body{
@@ -81,6 +75,70 @@ p{
   color:#c6d2de;
   cursor:not-allowed;
 }
+.service-client{
+  max-width:900px;
+  margin:auto;
+  padding:40px 7% 50px;
+  text-align:center;
+  border-top:1px solid #1d2c3d;
+}
+.service-client h2{
+  color:white;
+}
+.service-client p{
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+}
+.service-client a{
+  color:white;
+  font-weight:bold;
+}
+.service-client img{
+  width:24px;
+  height:24px;
+}
+.service-client button{
+  margin-top:15px;
+  padding:14px 24px;
+  border:none;
+  border-radius:30px;
+  background:#e50920;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+.reseaux-sociaux{
+  max-width:900px;
+  margin:auto;
+  padding:30px 7% 70px;
+  text-align:center;
+  border-top:1px solid #1d2c3d;
+}
+.reseaux-sociaux h2{
+  color:white;
+}
+.reseaux-sociaux a{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin:8px;
+  padding:12px 20px;
+  border-radius:30px;
+  background:#22303f;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+.reseaux-sociaux a:hover{
+  background:#e50920;
+}
+.reseaux-sociaux img{
+  width:20px;
+  height:20px;
+}
 footer{
   padding:25px 7%;
   border-top:1px solid #1d2c3d;
@@ -121,15 +179,20 @@ footer{
   </div>
 </main>
 
-<footer>
-  <span>© 2026 OmarShield</span>
-  <span>O-FLOW MARKETING DIGITAL</span>
-  <span>Tous droits réservés.</span>
-</footer>
 <div class="service-client">
-  <p>🟢 WhatsApp : <a href="https://wa.me/22658162567" target="_blank">+226 58 16 25 67</a></p>
+  <h2>Service client</h2>
 
-<p>📞 Téléphone : <a href="tel:+22654266940">+226 54 26 69 40</a></p>
+  <p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    WhatsApp :
+    <a href="https://wa.me/22658162567" target="_blank">+226 58 16 25 67</a>
+  </p>
+
+  <p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Phone_icon.svg" alt="Téléphone">
+    Téléphone :
+    <a href="tel:+22654266940">+226 54 26 69 40</a>
+  </p>
 
   <button type="button" onclick="ajouterNumero()">
     Ajouter
@@ -140,10 +203,41 @@ footer{
   </p>
 </div>
 
+<div class="reseaux-sociaux">
+  <h2>Suivez-nous</h2>
+
+  <a href="VOTRE_LIEN_FACEBOOK" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg" alt="Facebook">
+    Facebook
+  </a>
+
+  <a href="VOTRE_LIEN_YOUTUBE" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube">
+    YouTube
+  </a>
+
+  <a href="VOTRE_LIEN_TIKTOK" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Ionicons_logo_tiktok.svg" alt="TikTok">
+    TikTok
+  </a>
+
+  <a href="VOTRE_LIEN_INSTAGRAM" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
+    Instagram
+  </a>
+</div>
+
 <script>
   function ajouterNumero() {
     document.getElementById("confirmation").style.display = "block";
   }
 </script>
+
+<footer>
+  <span>© 2026 OmarShield</span>
+  <span>O-FLOW MARKETING DIGITAL</span>
+  <span>Tous droits réservés.</span>
+</footer>
+
 </body>
 </html>
