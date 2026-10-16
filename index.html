@@ -2,13 +2,99 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Omarshield</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1220;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .carte {
+      background: #111c31;
+      border: 1px solid #24344f;
+      border-radius: 18px;
+      padding: 35px;
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    .logo {
+      width: 70px;
+      height: 70px;
+      border-radius: 18px;
+      background: #22c55e;
+      color: #052e16;
+      font-size: 34px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 34px;
+    }
+
+    h2 {
+      margin: 10px 0 20px;
+      color: #86efac;
+      font-size: 18px;
+      font-weight: normal;
+    }
+
+    p {
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    .statut {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: #052e16;
+      color: #86efac;
+      font-size: 14px;
+      border: 1px solid #166534;
+    }
+
+    .bouton {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 25px;
+      background: #22c55e;
+      color: #052e16;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .bouton:hover {
+      background: #16a34a;
+    }
+  </style>
 </head>
 <body>
-  <h1>Omarshield</h1>
-  <h2>Mises à jour de l’antivirus</h2>
-  <p>Bienvenue sur le site officiel d’Omarshield.</p>
-  <p>Les mises à jour seront publiées ici régulièrement.</p>
-  <p><strong>Dernière mise à jour :</strong> bientôt disponible</p>
+  <div class="carte">
+    <div class="logo">O</div>
+    <h1>Omarshield</h1>
+    <h2>Mises à jour de l’antivirus</h2>
+    <p>Bienvenue sur le site officiel d’Omarshield.</p>
+    <p>Les mises à jour seront publiées ici régulièrement.</p>
+    <div class="statut">Dernière mise à jour : bientôt disponible</div>
+    <a class="bouton" href="#">Télécharger la mise à jour</a>
+  </div>
 </body>
 </html>
