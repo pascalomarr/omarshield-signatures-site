@@ -1,4 +1,237 @@
-@keyframes tournerBouclier {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OmarShield — Site officiel</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  color:white;
+  background:radial-gradient(circle at 75% 35%,#092e50,#020812 65%);
 }
+header{
+  padding:22px 7%;
+  border-bottom:1px solid #263b50;
+  display:flex;justify-content:space-between;
+  align-items:center;flex-wrap:wrap;gap:12px;
+}
+.logo{font-size:30px;font-weight:bold}
+.logo span{color:#ff1828}
+.logo small{display:block;font-size:12px;color:#ccd5e0}
+.slogan{color:#fff}
+.slogan span{color:#ff2438}
+main{
+  max-width:1200px;margin:auto;padding:65px 7%;
+  display:grid;grid-template-columns:1.1fr .9fr;
+  align-items:center;gap:40px;
+}
+h1{font-size:clamp(32px,5vw,52px);line-height:1.12}
+h1 span{color:#ff2638}
+.badge{
+  display:inline-block;background:#e50920;
+  padding:12px 18px;border-radius:30px;font-weight:bold;
+}
+.description{font-size:18px;line-height:1.7;color:#d6e0eb}
+.status{
+  margin:25px 0;padding:18px;
+  border:1px solid #1c9e9b;border-radius:15px;
+  background:#071725;
+}
+.status strong{display:block;color:#21e6a1;margin-top:7px}
+.download{
+  display:inline-block;background:linear-gradient(#ff3545,#d90016);
+  color:white;text-decoration:none;font-weight:bold;
+  padding:18px 25px;border-radius:35px;
+  box-shadow:0 0 22px #ff172b55;
+}
+.download:hover{transform:translateY(-2px)}
+.visual{
+  text-align:center;padding:35px 15px;
+  border:1px solid #264b6b;border-radius:25px;
+  background:linear-gradient(145deg,#102a43,#030a14);
+  box-shadow:0 0 45px #0066aa22;
+}
+.shield{
+  width:150px;height:170px;margin:auto;
+  display:grid;place-items:center;
+  font-size:85px;font-weight:bold;
+  color:white;
+  background:linear-gradient(135deg,#ff5964,#d90018 55%,#70000c);
+  clip-path:polygon(50% 0,95% 17%,88% 65%,50% 100%,12% 65%,5% 17%);
+  filter:drop-shadow(0 0 20px red);
+  animation:tournerBouclier 3s linear infinite;
+}
+@keyframes tournerBouclier{
+  0%{transform:rotate(0deg)}
+  100%{transform:rotate(360deg)}
+}
+.visual h2{font-size:32px}
+.visual h2 span{color:#ff2638}
+.features{
+  padding:25px 7%;display:grid;
+  grid-template-columns:repeat(4,1fr);gap:20px;
+  border-top:1px solid #263b50;
+}
+.feature{text-align:center;color:#dbe5ef}
+.feature b{display:block;color:#ff3446;margin-bottom:8px}
+
+.service-client,.reseaux-sociaux{
+  max-width:1200px;margin:auto;
+  padding:35px 7%;text-align:center;
+  border-top:1px solid #263b50;
+}
+.service-client p{
+  color:white;display:flex;justify-content:center;
+  align-items:center;gap:10px;
+}
+.service-client a,.reseaux-sociaux a{color:white;font-weight:bold}
+.service-client img{width:22px;height:22px}
+.service-client button{
+  margin-top:15px;padding:12px 22px;border:none;
+  border-radius:30px;background:#e90020;color:white;
+  font-weight:bold;cursor:pointer;
+}
+.reseaux-sociaux a{
+  display:inline-flex;align-items:center;gap:8px;
+  margin:6px;padding:10px 18px;border-radius:30px;
+  background:#0d2d4b;color:white;text-decoration:none;
+  font-weight:bold;border:1px solid #27618c;
+}
+.reseaux-sociaux a:hover{background:#e90020;border-color:#e90020}
+.reseaux-sociaux img{width:18px;height:18px}
+
+footer{
+  padding:25px 7%;border-top:1px solid #263b50;
+  display:flex;justify-content:space-between;
+  gap:15px;flex-wrap:wrap;color:#9baabd;font-size:13px;
+}
+@media(max-width:750px){
+  main{grid-template-columns:1fr;padding-top:35px}
+  .features{grid-template-columns:repeat(2,1fr)}
+  .slogan{font-size:13px}
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="logo">🛡️ Omar<span>Shield</span>
+    <small>Antivirus · Antimalware · Protection totale</small>
+  </div>
+  <div class="slogan">Votre sécurité, notre <span>priorité</span></div>
+</header>
+
+<main>
+  <section>
+    <div class="badge">⟳ Mise à jour de l’antivirus</div>
+    <h1>Bienvenue sur le site officiel d’<span>OmarShield</span></h1>
+    <p class="description">
+      Les mises à jour de votre antivirus seront publiées ici
+      régulièrement. Retrouvez les nouvelles versions sur
+      notre site officiel.
+    </p>
+
+    <div class="status">
+      Dernière mise à jour :
+      <strong>● Bientôt disponible</strong>
+    </div>
+
+    <a class="download"
+       href="https://github.com/pascalomarr/omarshield-signatures-site/releases/latest"
+       target="_blank" rel="noopener">
+       ⬇ Télécharger la mise à jour
+    </a>
+  </section>
+
+  <section class="visual">
+    <div class="shield">O</div>
+    <h2>Omar<span>Shield</span></h2>
+    <p>Antivirus · Antimalware</p>
+    <p style="color:#20e6a0">✓ Votre sécurité, notre priorité</p>
+    <p>Protection • Performance • Confiance</p>
+  </section>
+</main>
+
+<section class="features">
+  <div class="feature"><b>🛡 Protection</b>En temps réel</div>
+  <div class="feature"><b>🔍 Détection</b>Des menaces</div>
+  <div class="feature"><b>🌐 Navigation</b>Sécurisée</div>
+  <div class="feature"><b>🔒 Confidentialité</b>Vos données protégées</div>
+</section>
+
+<div class="service-client">
+  <h2>Service client</h2>
+
+  <p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    WhatsApp :
+    <a href="https://wa.me/c/22658162567" target="_blank">+226 58 16 25 67</a>
+  </p>
+
+  <p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Phone_icon.svg" alt="Téléphone">
+    Téléphone :
+    <a href="tel:+22654266940">+226 54 26 69 40</a>
+  </p>
+
+  <button type="button" onclick="ajouterNumero()">
+    Ajouter
+  </button>
+
+  <p id="confirmation" style="display:none;">
+    Numéros du service client ajoutés.
+  </p>
+</div>
+
+<div class="reseaux-sociaux">
+  <h2>Suivez-nous</h2>
+
+  <a href="https://wa.me/c/22658162567" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    WhatsApp
+  </a>
+
+  <a href="https://www.instagram.com/oflowmarketingdigital" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
+    Instagram
+  </a>
+
+  <a href="https://www.facebook.com/oflowmarketingdigital" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg" alt="Facebook">
+    Facebook
+  </a>
+
+  <a href="https://www.tiktok.com/@digitalflow.o" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Ionicons_logo_tiktok.svg" alt="TikTok">
+    TikTok
+  </a>
+
+  <a href="https://www.twitch.tv/55974306" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Twitch_logo_%282019%29.svg" alt="Twitch">
+    Twitch
+  </a>
+
+  <a href="https://youtube.com/@afrilivet" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
+    YouTube
+  </a>
+</div>
+
+<footer>
+  <span>© 2026 OmarShield</span>
+  <span>O-FLOW MARKETING DIGITAL</span>
+  <span>Tous droits réservés.</span>
+</footer>
+
+<script>
+function ajouterNumero(){
+  document.getElementById("confirmation").style.display="block";
+}
+</script>
+
+</body>
+</html>
