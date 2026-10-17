@@ -3,215 +3,268 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OmarShield</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OmarShield - Site officiel</title>
 <style>
 *{box-sizing:border-box}
 body{
- margin:0;min-height:100vh;color:white;
+ margin:0;
+ min-height:100vh;
  font-family:Arial,sans-serif;
- background:radial-gradient(ellipse at 75% 35%,#073d70,#020711 65%);
- overflow-x:hidden;
+ color:white;
+ background:#020812;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ padding:40px 15px;
 }
-body:before{
- content:"";position:fixed;inset:0;pointer-events:none;
- background:linear-gradient(135deg,transparent 70%,#ed001b33),
- repeating-linear-gradient(120deg,transparent 0 100px,#12345a22 101px 102px);
+.container{
+ text-align:center;
+ background:#111111;
+ padding:40px;
+ border-radius:12px;
+ box-shadow:0 0 20px rgba(0,150,255,.3);
+ border:1px solid #173c60;
+ max-width:650px;
+ width:100%;
 }
-header{padding:25px 6%;border-bottom:1px solid #173c60}
-.brand{font-size:28px;font-weight:bold}
-.brand span{color:#ff1834}
-header small{display:block;color:#c7d8ed;margin-top:6px}
-main{
- position:relative;display:grid;
- grid-template-columns:200px 1fr 1fr;
- align-items:center;gap:35px;
- max-width:1400px;margin:auto;padding:70px 5%;
+h1{
+ font-size:32px;
+ margin:15px 0 10px;
+ color:white;
 }
-.features{display:grid;gap:30px}
-.feature{border-bottom:1px solid #6b1829;padding-bottom:15px}
-.feature b{color:#ff3048;display:block;margin-bottom:7px}
-.hero{text-align:center}
-.shield{
- width:150px;height:175px;margin:auto;
- display:grid;place-items:center;font-size:85px;font-weight:bold;
+p{
+ color:#8e8e8e;
+ font-size:16px;
+}
+.logo-bouclier{
+ width:110px;
+ height:130px;
+ margin:auto;
+ display:grid;
+ place-items:center;
+ font-size:55px;
+ font-weight:bold;
  color:white;
  background:linear-gradient(130deg,#ff4a57,#e90020 50%,#70000e);
  clip-path:polygon(50% 0,95% 16%,88% 65%,50% 100%,12% 65%,5% 16%);
  filter:drop-shadow(0 0 22px #ff001e);
+ animation:tournerBouclier 3s linear infinite;
 }
-h1{font-size:clamp(35px,5vw,65px);margin:15px 0}
-h1 span{color:#ff1834}
-.subtitle{font-weight:bold;font-size:18px}
-.tagline{font-style:italic;color:#d8e7fa;font-size:22px}
-.laptop{
- min-height:300px;border:2px solid #27618c;border-radius:18px;
- background:linear-gradient(145deg,#0d2d4b,#020712);
- box-shadow:0 0 45px #007bff33;
- display:flex;flex-direction:column;justify-content:center;
- align-items:center;text-align:center;padding:25px;
+@keyframes tournerBouclier{
+ 0%{transform:rotate(0deg)}
+ 100%{transform:rotate(360deg)}
 }
-.laptop .mini{font-size:70px;color:#ff1d39}
-.laptop h2{font-size:28px}
-.laptop p{color:#a9c9e7}
-.line{height:3px;background:#ff1535;box-shadow:0 0 18px red}
+.btn{
+ display:inline-block;
+ margin-top:20px;
+ padding:12px 24px;
+ background:#007acc;
+ color:white;
+ text-decoration:none;
+ border-radius:6px;
+ font-weight:bold;
+}
+.btn:hover{background:#005999}
+
 .mise-a-jour{
- max-width:1400px;margin:auto;padding:50px 6%;
- text-align:center;border-top:1px solid #173c60;
+ margin-top:35px;
+ padding-top:25px;
+ border-top:1px solid #173c60;
 }
 .mise-a-jour h2{color:white}
-.mise-a-jour p{color:#d8e7fa}
+.bouton-mise-a-jour{
+ display:inline-block;
+ margin-top:15px;
+ padding:14px 26px;
+ border:none;
+ border-radius:30px;
+ background:#e90020;
+ color:white;
+ font-weight:bold;
+ cursor:pointer;
+}
+.bouton-mise-a-jour.disponible{background:#00b34a}
+.bouton-mise-a-jour:hover{opacity:.9}
 .bouton-telecharger{
- display:inline-block;margin-top:18px;
- padding:16px 32px;border-radius:35px;
- background:#00b34a;color:white;
- font-weight:bold;text-decoration:none;
+ display:inline-block;
+ margin-top:15px;
+ padding:14px 26px;
+ border-radius:30px;
+ background:#00b34a;
+ color:white;
+ font-weight:bold;
+ text-decoration:none;
 }
 .bouton-telecharger:hover{background:#009140}
-.note{color:#c7d8ed;font-size:15px;margin-top:12px}
+.note{color:#c7d8ed;font-size:14px;margin-top:12px}
+
 .service-client,.reseaux-sociaux{
- max-width:1400px;margin:auto;padding:45px 6%;
- text-align:center;position:relative;
+ margin-top:35px;
+ padding-top:25px;
+ border-top:1px solid #173c60;
 }
-.service-client{border-top:1px solid #173c60}
 .service-client h2,.reseaux-sociaux h2{color:white}
 .service-client p{
- color:white;display:flex;justify-content:center;
- align-items:center;gap:10px;font-size:18px;
+ color:white;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ gap:10px;
 }
 .service-client a,.reseaux-sociaux a{color:white;font-weight:bold}
-.service-client img{width:24px;height:24px}
+.service-client img{width:22px;height:22px}
 .service-client button{
- margin-top:15px;padding:14px 24px;border:none;
- border-radius:30px;background:#e90020;color:white;
- font-weight:bold;cursor:pointer;
+ margin-top:15px;
+ padding:12px 22px;
+ border:none;
+ border-radius:30px;
+ background:#e90020;
+ color:white;
+ font-weight:bold;
+ cursor:pointer;
 }
-.reseaux-sociaux{border-top:1px solid #173c60}
 .reseaux-sociaux a{
- display:inline-flex;align-items:center;gap:8px;
- margin:8px;padding:12px 20px;border-radius:30px;
- background:#0d2d4b;color:white;text-decoration:none;
- font-weight:bold;border:1px solid #27618c;
+ display:inline-flex;
+ align-items:center;
+ gap:8px;
+ margin:6px;
+ padding:10px 18px;
+ border-radius:30px;
+ background:#0d2d4b;
+ color:white;
+ text-decoration:none;
+ font-weight:bold;
+ border:1px solid #27618c;
 }
 .reseaux-sociaux a:hover{background:#e90020;border-color:#e90020}
-.reseaux-sociaux img{width:20px;height:20px}
-footer{text-align:center;padding:22px;color:#a9bed5}
-@media(max-width:800px){
- main{grid-template-columns:1fr;padding:35px 7%;gap:30px}
- .features{grid-template-columns:1fr 1fr;gap:15px}
- .laptop{min-height:220px}
+.reseaux-sociaux img{width:18px;height:18px}
+
+footer{
+ margin-top:35px;
+ padding-top:20px;
+ border-top:1px solid #173c60;
+ color:#a9bed5;
+ font-size:14px;
 }
 </style>
 </head>
 <body>
-<header>
- <div class="brand">🛡️ Omar<span>Shield</span></div>
- <small>Antivirus · Antimalware · Protection totale</small>
-</header>
 
-<main>
- <section class="features">
-  <div class="feature"><b>🛡 Protection</b>En temps réel</div>
-  <div class="feature"><b>◎ Détection</b>Des menaces</div>
-  <div class="feature"><b>🌐 Navigation</b>Sécurisée</div>
-  <div class="feature"><b>🔒 Confidentialité</b>Vos données protégées</div>
- </section>
+<div class="container">
 
- <section class="hero">
-  <div class="shield">O</div>
-  <h1>Omar<span>Shield</span></h1>
-  <div class="subtitle">Antivirus · Antimalware · Protection totale</div>
-  <p class="tagline">Votre sécurité, notre priorité</p>
- </section>
+ <div class="logo-bouclier">O</div>
 
- <section class="laptop">
-  <div class="mini">🛡</div>
-  <h2>Omar<span style="color:#ff1834">Shield</span></h2>
-  <p>Votre ordinateur, notre priorité.</p>
-  <p>Protection · Performance · Confiance</p>
- </section>
-</main>
+ <h1>OmarShield</h1>
+ <p>Official Site - Security & Signatures</p>
 
-<div class="mise-a-jour">
-  <h2>⟳ Mise à jour disponible</h2>
+ <a href="https://pascalomarr.github.io/omarshield-signatures-site/" class="btn">
+  Accéder aux signatures
+ </a>
 
-  <p>
-    Une nouvelle version d’OmarShield est disponible pour tous les clients.
+ <div class="mise-a-jour">
+  <h2>⟳ Mise à jour</h2>
+
+  <p id="texte-mise-a-jour">
+   Aucune nouvelle mise à jour n’est disponible pour le moment.
   </p>
 
-  <a class="bouton-telecharger" href="#">
+  <button class="bouton-mise-a-jour" id="bouton-mise-a-jour" onclick="verifierMiseAJour()">
+   Vérifier les mises à jour
+  </button>
+
+  <div id="zone-telechargement" style="display:none;">
+   <a class="bouton-telecharger" href="#" download>
     ⬇ Télécharger la mise à jour
-  </a>
+   </a>
+  </div>
 
   <p class="note">
-    Cette mise à jour est destinée aux clients ayant déjà installé OmarShield.
+   Cette mise à jour est destinée aux clients ayant déjà installé OmarShield.
   </p>
-</div>
+ </div>
 
-<div class="service-client">
+ <div class="service-client">
   <h2>Service client</h2>
 
   <p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    WhatsApp :
-    <a href="https://wa.me/c/22658162567" target="_blank">+226 58 16 25 67</a>
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+   WhatsApp :
+   <a href="https://wa.me/c/22658162567" target="_blank">+226 58 16 25 67</a>
   </p>
 
   <p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Phone_icon.svg" alt="Téléphone">
-    Téléphone :
-    <a href="tel:+22654266940">+226 54 26 69 40</a>
+   <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Phone_icon.svg" alt="Téléphone">
+   Téléphone :
+   <a href="tel:+22654266940">+226 54 26 69 40</a>
   </p>
 
   <button type="button" onclick="ajouterNumero()">
-    Ajouter
+   Ajouter
   </button>
 
   <p id="confirmation" style="display:none;">
-    Numéros du service client ajoutés.
+   Numéros du service client ajoutés.
   </p>
-</div>
+ </div>
 
-<div class="reseaux-sociaux">
+ <div class="reseaux-sociaux">
   <h2>Suivez-nous</h2>
 
   <a href="https://wa.me/c/22658162567" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    WhatsApp
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+   WhatsApp
   </a>
 
   <a href="https://www.instagram.com/oflowmarketingdigital" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
-    Instagram
+   <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
+   Instagram
   </a>
 
   <a href="https://www.facebook.com/oflowmarketingdigital" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg" alt="Facebook">
-    Facebook
+   <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg" alt="Facebook">
+   Facebook
   </a>
 
   <a href="https://www.tiktok.com/@digialmarketing5?_r=1&_t=ZS-94NI1iXZGbc" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Ionicons_logo_tiktok.svg" alt="TikTok">
-    TikTok
+   <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Ionicons_logo_tiktok.svg" alt="TikTok">
+   TikTok
   </a>
 
   <a href="https://www.twitch.tv/55974306" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Twitch_logo_%282019%29.svg" alt="Twitch">
-    Twitch
+   <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Twitch_logo_%282019%29.svg" alt="Twitch">
+   Twitch
   </a>
+
+  <a href="VOTRE_LIEN_YOUTUBE" target="_blank">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
+   YouTube
+  </a>
+ </div>
+
+ <footer>
+  © 2026 OmarShield — O-FLOW MARKETING DIGITAL<br>
+  Tous droits réservés.
+ </footer>
+
 </div>
 
-<div class="line"></div>
-
 <script>
-  function ajouterNumero() {
-    document.getElementById("confirmation").style.display = "block";
-  }
+function ajouterNumero(){
+ document.getElementById("confirmation").style.display="block";
+}
+
+function verifierMiseAJour(){
+ const bouton=document.getElementById("bouton-mise-a-jour");
+ const texte=document.getElementById("texte-mise-a-jour");
+ const zone=document.getElementById("zone-telechargement");
+
+ bouton.classList.add("disponible");
+ bouton.textContent="Mise à jour disponible";
+ texte.textContent="Une nouvelle version d’OmarShield est disponible pour tous les clients.";
+ zone.style.display="block";
+}
 </script>
 
-<footer>
- © 2026 OmarShield — O-FLOW MARKETING DIGITAL<br>
- Tous droits réservés.
-</footer>
 </body>
 </html>
